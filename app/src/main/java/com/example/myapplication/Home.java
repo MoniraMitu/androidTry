@@ -29,7 +29,7 @@ public class Home extends AppCompatActivity {
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "okkk", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "okkk ....!", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(Home.this, CreateEmployee.class));
             }
         });
