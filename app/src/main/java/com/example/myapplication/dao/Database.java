@@ -20,8 +20,8 @@ public class Database extends SQLiteOpenHelper {
         String query =  "Create Table User (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, GENDER TEXT, EMAIL TEXT, " +
                 "PASSWORD TEXT,CONTACT INTEGER)";
 
-        String query2 = "Create Table Employee (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, GENDER TEXT, EMAIL TEXT, " +
-                "PASSWORD TEXT,CONTACT INTEGER ,DEPARTMENT TEXT)";
+        String query2 = "Create Table Employee (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, GENDER TEXT, EMAIL TEXT, PASSWORD TEXT,CONTACT INTEGER ,DEPARTMENT TEXT)";
+
 
 
         db.execSQL(query);
@@ -53,11 +53,11 @@ public class Database extends SQLiteOpenHelper {
 
 
         ContentValues values= new ContentValues();
-        values.put("Name",emp.getName());
-        values.put("Email",emp.getEmail());
-        values.put("Password",emp.getPassword());
-        values.put("Contact",emp.getContact());
-        values.put("Department",emp.getDepartment());
+        values.put("NAME",emp.getName());
+        values.put("EMAIL",emp.getEmail());
+        values.put("PASSWORD",emp.getPassword());
+        values.put("CONTACT",emp.getContact());
+        values.put("DEPARTMENT",emp.getDepartment());
 
         DB.insert("Employee",null,values);
         DB.close();

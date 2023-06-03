@@ -28,7 +28,7 @@ public class CreateEmployee extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_employee);
 
-        Employee emp=new Employee();
+
 
         edEmployeeName=findViewById(R.id.name);
         edEmployeePassword=findViewById(R.id.password);
@@ -41,12 +41,23 @@ public class CreateEmployee extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Employee emp=new Employee();
+
+
                 String name= edEmployeeName.getText().toString();
                 String  password=edEmployeePassword.getText().toString();
                 String email=edEmployeeEmail.getText().toString();
                 Integer contact = Integer.valueOf(edEmployeeContact.getText().toString());
                 String coName=tv.getText().toString();
                 String department=spinnerDepartment.getSelectedItem().toString();
+
+
+                emp.setName(name);
+                emp.setPassword(password);
+                emp.setContact(contact);
+                emp.setEmail(email);
+                emp.setDepartment(department);
+
 
 
                 Database database = new Database(getApplicationContext(),"healthcare",null,1);
