@@ -40,7 +40,7 @@ public class LogIn extends AppCompatActivity {
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)  {
                 String name= edUserName.getText().toString();
                 String  password=edPassword.getText().toString();
                 Database database = new Database(getApplicationContext(),"healthcare",null,1);
